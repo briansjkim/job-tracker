@@ -2,4 +2,4 @@
 
 ### Track Your Job Search
 
-https://jobify-8nrt.onrender.com/landing
+https://jobify-8nrt.onrender.com/
