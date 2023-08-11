@@ -11,6 +11,10 @@ Jobify is a MERN stack application used to make tracking your job search more or
 
 
 ### Features
+![image](https://github.com/briansjkim/job-manager/assets/39395494/004f1a8b-1a9e-4522-af6f-c0ddcbaae350)
+![image](https://github.com/briansjkim/job-manager/assets/39395494/dee3f86a-5b2f-4060-84b1-6dd30e8baff5)
+![image](https://github.com/briansjkim/job-manager/assets/39395494/2c8cb3cf-7d81-46f6-8701-4a7e68822ae2)
+
 - Login / Sign up with cookies
 - Add/Update/Delete jobs
 -   Jobs can be configured to add/omit details such as: positive, company, location, work environment, stage, status, and requirements
