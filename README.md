@@ -29,3 +29,5 @@ Jobify is a MERN stack application used to make tracking your job search more or
 - MongoDB
 - Render (Deployment)
 
+### Note
+App loadup does take a while for the first time, or after several minutes, due to it being deployed on the free plan
