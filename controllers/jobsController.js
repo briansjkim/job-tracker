@@ -41,7 +41,7 @@ const getAllJobs = async (req, res) => {
   // so, if search is 'e', we'll get all results where the position has the letter 'e'
   // 'i' in options means case insensitivity
   if (search) {
-    queryObject.position = { $regex: search, $options: "i" };
+    queryObject.company = { $regex: search, $options: "i" };
   }
 
   // no AWAit because we want to chain the sort conditions

@@ -34,6 +34,7 @@ const SearchContainer = () => {
         {/* search */}
         <div className="form-center">
           <FormRow
+            labelText="company"
             type="text"
             name="search"
             value={search}
