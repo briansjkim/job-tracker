@@ -18,11 +18,11 @@ const SearchContainer = () => {
 
   const handleSearch = (e) => {
     // prevents user from constantly invoking handleChange while the request is still going through
-    if (isLoading) return;
+    // if (isLoading) return;
     handleChange({ name: e.target.name, value: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleClear = (e) => {
     e.preventDefault();
     clearFilters();
   };
@@ -62,10 +62,13 @@ const SearchContainer = () => {
             handleChange={handleSearch}
             list={sortOptions}
           ></FormRowSelect>
+          {/* <button className="btn btn-block btn-hipster" disabled={isLoading} onClick>
+            Submit
+          </button> */}
           <button
             className="btn btn-block btn-danger"
             disabled={isLoading}
-            onClick={handleSubmit}
+            onClick={handleClear}
           >
             Clear Filters
           </button>
