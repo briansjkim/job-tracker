@@ -4,6 +4,8 @@
 
 https://jobify-8nrt.onrender.com/
 
+Note: App loadup does take a while due to it being deployed on the free plan
+
 ### About The Project
 Jobify is a MERN stack application used to make tracking your job search more organized
 
@@ -28,6 +30,3 @@ Jobify is a MERN stack application used to make tracking your job search more or
 - Node/Express
 - MongoDB
 - Render (Deployment)
-
-### Note
-App loadup does take a while for the first time, or after several minutes, due to it being deployed on the free plan
