@@ -17,8 +17,6 @@ const SearchContainer = () => {
   } = useAppContext();
 
   const handleSearch = (e) => {
-    // prevents user from constantly invoking handleChange while the request is still going through
-    // if (isLoading) return;
     handleChange({ name: e.target.name, value: e.target.value });
   };
 
@@ -31,7 +29,6 @@ const SearchContainer = () => {
     <Wrapper>
       <form className="form">
         <h4>Search Form</h4>
-        {/* search */}
         <div className="form-center">
           <FormRow
             labelText="company"
@@ -40,7 +37,6 @@ const SearchContainer = () => {
             value={search}
             handleChange={handleSearch}
           ></FormRow>
-          {/* status */}
           <FormRowSelect
             labelText="job status"
             name="searchStatus"
@@ -48,7 +44,6 @@ const SearchContainer = () => {
             handleChange={handleSearch}
             list={["all", ...statusOptions]}
           ></FormRowSelect>
-          {/* work env */}
           <FormRowSelect
             labelText="work environment"
             name="searchEnv"
@@ -56,16 +51,12 @@ const SearchContainer = () => {
             handleChange={handleSearch}
             list={["all", ...workEnvOptions]}
           ></FormRowSelect>
-          {/* sort */}
           <FormRowSelect
             name="sort"
             value={sort}
             handleChange={handleSearch}
             list={sortOptions}
           ></FormRowSelect>
-          {/* <button className="btn btn-block btn-hipster" disabled={isLoading} onClick>
-            Submit
-          </button> */}
           <button
             className="btn btn-block btn-danger"
             disabled={isLoading}
@@ -78,4 +69,5 @@ const SearchContainer = () => {
     </Wrapper>
   );
 };
+
 export default SearchContainer;

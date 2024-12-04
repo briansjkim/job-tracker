@@ -10,7 +10,6 @@ const NavLinks = ({ toggleSidebar }) => {
         return (
           <NavLink
             to={path}
-            // isActive is a prop from React Router DOM which is true/false depending on whether it's the active page or not
             className={({ isActive }) =>
               isActive ? "nav-link active" : "nav-link"
             }
@@ -25,4 +24,5 @@ const NavLinks = ({ toggleSidebar }) => {
     </div>
   );
 };
+
 export default NavLinks;

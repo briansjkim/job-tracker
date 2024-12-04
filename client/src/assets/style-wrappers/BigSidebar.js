@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Wrapper = styled.aside`
   display: none;
@@ -63,4 +63,4 @@ const Wrapper = styled.aside`
     }
   }
 `
-export default Wrapper
+export default Wrapper;

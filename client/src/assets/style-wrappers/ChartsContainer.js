@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Wrapper = styled.section`
   margin-top: 4rem;
@@ -17,4 +17,4 @@ const Wrapper = styled.section`
   }
 `
 
-export default Wrapper
+export default Wrapper;

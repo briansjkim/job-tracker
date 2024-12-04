@@ -23,4 +23,5 @@ const BigSidebar = () => {
     </Wrapper>
   );
 };
+
 export default BigSidebar;

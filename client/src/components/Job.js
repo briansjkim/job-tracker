@@ -2,8 +2,9 @@ import moment from "moment";
 import { FaLocationArrow, FaCalendarAlt } from "react-icons/fa";
 import { GiStairsGoal } from "react-icons/gi";
 import { HiBuildingOffice } from "react-icons/hi2";
-import { useAppContext } from "../context/appContext";
 import { Link } from "react-router-dom";
+
+import { useAppContext } from "../context/appContext";
 import Wrapper from "../assets/style-wrappers/Job.js";
 import JobInfo from "./JobInfo";
 
@@ -12,6 +13,7 @@ const Job = ({ job }) => {
 
   let date = moment(job.createdAt);
   date = date.format("MMM Do, YYYY");
+
   return (
     <Wrapper>
       <header>

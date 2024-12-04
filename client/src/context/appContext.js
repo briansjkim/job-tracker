@@ -62,15 +62,15 @@ const initialState = {
   stage: "first stage",
   workEnv: "onsite",
   workEnvOptions: ["onsite", "remote", "hybrid"],
-  // all job properties
+  // job properties
   jobs: [],
   totalJobs: 0,
   numOfPages: 1,
-  page: 1, // for pagination
-  // stats
+  page: 1,
+  // stats properties
   stats: {},
   monthlyApplications: [],
-  // filter/search
+  // filter properties
   search: "",
   searchStatus: "all",
   searchEnv: "all",
@@ -88,8 +88,8 @@ const AppProvider = ({ children }) => {
 
   // ** Used for JWT not cookies
   // request interceptor
-  // adds the Bearer token before sending the request
-  // if there's any errors, we'll send an error Promise object
+    // adds the Bearer token before sending the request
+    // if there's any errors, we'll send an error Promise object
   // authFetch.interceptors.request.use(
   //   (config) => {
   //     config.headers["Authorization"] = `Bearer ${state.token}`;
@@ -140,7 +140,6 @@ const AppProvider = ({ children }) => {
     dispatch({ type: GET_JOBS_BEGIN });
 
     try {
-      // ** by default axios is a GET req, so we can omit the .get
       const { data } = await authFetch(url);
       const { jobs, totalJobs, numOfPages } = data;
 
@@ -152,8 +151,7 @@ const AppProvider = ({ children }) => {
       logoutUser();
     }
     // ** we're adding logoutUser and clearAlert because there should be no 400 or 404 errors
-    // ** even if the filters return nothing, we'll let the user know
-    // ** so the possible errors here are 401 (unauth) and 500 (server down), so we want to get the user out of our app
+    // ** even if the filters return nothing, we'll let the user know so the possible errors here are 401 (unauth) and 500 (server down), so we want to get the user out of our app
     clearAlert();
   };
 
@@ -223,7 +221,6 @@ const AppProvider = ({ children }) => {
         payload: { user, location, data },
       });
     } catch (error) {
-      // if it's NOT a 401 error, then we want to display an error alert
       if (error.response.status !== 401) {
         dispatch({
           type: UPDATE_USER_ERROR,
@@ -384,13 +381,11 @@ const AppProvider = ({ children }) => {
   );
 };
 
-// we can create a custom hook like this which will return AppContext in the sense of a global context
-// by doing it this way, we can avoid importing useContext and AppContext in every component that needs this global context
+// we can create a custom hook like this which will return AppContext in the sense of a global context -> can avoid importing both Contexts in every component
 const useAppContext = () => {
   return useContext(AppContext);
 };
 
-// why are we returning initialState?
-// because we want to import it in our reducer. We want to return an empty object with all default values for logging the user out
+// return initialState we want to import it in our reducer. We want to return an empty object with all default values for logging the user out
 // just removing the user info from localStorage will not update those values in local state
 export { AppProvider, initialState, useAppContext };

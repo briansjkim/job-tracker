@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Wrapper = styled.section`
   display: grid;
@@ -32,4 +32,4 @@ const Wrapper = styled.section`
     letter-spacing: var(--letterSpacing);
   }
 `
-export default Wrapper
+export default Wrapper;

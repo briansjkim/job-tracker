@@ -1,7 +1,8 @@
 import { useState } from "react";
+import { FaAlignLeft, FaUserCircle, FaCaretDown } from "react-icons/fa";
+
 import { useAppContext } from "../context/appContext";
 import Wrapper from "../assets/style-wrappers/Navbar";
-import { FaAlignLeft, FaUserCircle, FaCaretDown } from "react-icons/fa";
 import Logo from "./Logo";
 
 const Navbar = () => {
@@ -23,7 +24,6 @@ const Navbar = () => {
         <div className="btn-container">
           <button className="btn" onClick={() => setShowLogout(!showLogout)}>
             <FaUserCircle />
-            {/* check if user exists first just to avoid any errors */}
             {user && user.name}
             <FaCaretDown />
           </button>
@@ -37,4 +37,5 @@ const Navbar = () => {
     </Wrapper>
   );
 };
+
 export default Navbar;

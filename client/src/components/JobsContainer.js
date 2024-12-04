@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+
 import { useAppContext } from "../context/appContext";
 import { Loading, Job, PageBtnContainer, Alert } from "./index";
 import Wrapper from "../assets/style-wrappers/JobsContainer";

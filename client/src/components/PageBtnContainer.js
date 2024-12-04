@@ -1,11 +1,11 @@
-import { useAppContext } from "../context/appContext";
 import { HiChevronDoubleLeft, HiChevronDoubleRight } from "react-icons/hi2";
+
+import { useAppContext } from "../context/appContext";
 import Wrapper from "../assets/style-wrappers/PageBtnContainer";
 
 const PageBtnContainer = () => {
   const { numOfPages, page, changePage } = useAppContext();
 
-  // use underscore because we don't want to access the item
   const pages = Array.from({ length: numOfPages }, (_, index) => {
     return index + 1;
   });
@@ -55,4 +55,5 @@ const PageBtnContainer = () => {
     </Wrapper>
   );
 };
+
 export default PageBtnContainer;

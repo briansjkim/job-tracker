@@ -146,6 +146,21 @@ const reducer = (state, action) => {
       return { ...state, ...initialState };
     }
 
+    case CLEAR_FILTERS:
+      return {
+        ...state,
+        search: "",
+        searchStatus: "all",
+        searchEnv: "all",
+        sort: "latest",
+      };
+
+    case CHANGE_PAGE:
+      return {
+        ...state,
+        page: action.payload.page,
+      };
+
     case CREATE_JOB_BEGIN:
       return {
         ...state,
@@ -253,21 +268,6 @@ const reducer = (state, action) => {
         isLoading: false,
         stats: action.payload.stats,
         monthlyApplications: action.payload.monthlyApplications,
-      };
-
-    case CLEAR_FILTERS:
-      return {
-        ...state,
-        search: "",
-        searchStatus: "all",
-        searchEnv: "all",
-        sort: "latest",
-      };
-
-    case CHANGE_PAGE:
-      return {
-        ...state,
-        page: action.payload.page,
       };
 
     case GET_CURRENT_USER_BEGIN:
